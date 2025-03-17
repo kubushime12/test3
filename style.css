@@ -603,3 +603,21 @@ footer {
     height: 30px;
   }
 }
+/* Stylowanie dla pola wyboru */
+select {
+  width: auto; /* Automatyczna szerokość */
+  padding: 5px 10px; /* Mniejsze wypełnienie w pionie i poziomie */
+  font-size: 0.9rem; /* Mniejsza czcionka */
+  height: 30px; /* Mniejsza wysokość */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  border: 1px solid #d1c4e9; /* Delikatna ramka */
+  background-color: rgba(255, 255, 255, 0.8); /* Tło z przezroczystością */
+  transition: all 0.3s ease; /* Płynna animacja przy zmianie */
+}
+
+/* Zmiana wyglądu przy focus */
+select:focus {
+  outline: none;
+  border-color: #ba68c8; /* Zmiana koloru ramki */
+  box-shadow: 0 0 5px rgba(186, 104, 200, 0.5); /* Lekki cień */
+}
