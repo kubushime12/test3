@@ -523,6 +523,314 @@ footer {
     width: 90%;
   }
 }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Efekt tła: Bloby */
+.blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.4), rgba(238, 130, 238, 0.3));
+  filter: blur(100px);
+  border-radius: 50%;
+  animation: floatBlob 20s infinite ease-in-out;
+}
+
+@keyframes floatBlob {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(100px, 200px) scale(1.2); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Efekt tła: Linie */
+.lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.line {
+  position: absolute;
+  width: 6px;
+  height: 200%;
+  background: linear-gradient(to bottom, rgba(190, 85, 220, 0), rgba(190, 85, 220, 0.3), rgba(190, 85, 220, 0));
+  filter: drop-shadow(0 0 6px rgba(190, 85, 220, 0.4));
+  border-radius: 50px;
+  animation: moveLines 8s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes moveLines {
+  0% { transform: translateY(-200%); }
+  100% { transform: translateY(200%); }
+}
+
+/* Linie rozmieszczenie */
+.line:nth-child(1) { left: 15%; animation-duration: 9s; }
+.line:nth-child(2) { left: 35%; animation-duration: 8s; }
+.line:nth-child(3) { left: 55%; animation-duration: 10s; }
+.line:nth-child(4) { left: 75%; animation-duration: 7s; }
+.line:nth-child(5) { left: 90%; animation-duration: 11s; }
+
+/* Header */
+header {
+  background: rgba(243, 229, 245, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #d1c4e9;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #8e24aa;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover { transform: scale(1.1); }
+
+nav a, .btn-header {
+  margin-left: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background: #8e24aa;
+  border-radius: 50px;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(186, 104, 200, 0.4);
+}
+
+nav a:hover, .btn-header:hover {
+  background: #6a1b9a;
+  transform: scale(1.05);
+}
+
+/* Hero */
+.hero {
+  flex: 1;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h2 { font-size: 3rem; color: #6a1b9a; }
+.hero p { font-size: 1.3rem; color: #5e345e; max-width: 800px; margin: 0 auto; }
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  background: #ba68c8;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(186, 104, 200, 0.4);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover { background: #8e24aa; transform: scale(1.05); }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(243, 229, 245, 0.9);
+  border-top: 2px solid #d1c4e9;
+  margin-top: auto;
+}
+
+/* Formularz zapisy */
+.form-zapisy {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-zapisy input {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  border: 2px solid #d1c4e9;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: #6a1b9a;
+}
+
+.form-zapisy input:focus {
+  border-color: #ba68c8;
+  outline: none;
+  box-shadow: 0 0 8px rgba(186, 104, 200, 0.5);
+}
+
+.form-zapisy button {
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #ba68c8, #8e24aa);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(186, 104, 200, 0.4);
+  transition: all 0.3s ease;
+}
+
+.form-zapisy button:hover {
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  transform: scale(1.05);
+}
+
+/* Sekcja Kalendarza */
+.calendar-section {
+  padding: 60px 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.calendar-section h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #ba68c8, #8e24aa);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Tabela */
+.calendar {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Komórki tabeli */
+.calendar th, .calendar td {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #222;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Nagłówki tabeli */
+.calendar th {
+  background: rgba(250, 250, 250, 0.5);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #111;
+  font-weight: bold;
+}
+
+/* Efekt najechania */
+.calendar tr:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.015);
+  transition: 0.3s ease;
+}
+
+/* Efekt gradientu na wiersze */
+.calendar td {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(245, 245, 245, 0.2));
+  color: #333;
+}
+
+/* Zaokrąglenia rogów */
+.calendar th:first-child { border-top-left-radius: 20px; }
+.calendar th:last-child { border-top-right-radius: 20px; }
+.calendar tr:last-child td:first-child { border-bottom-left-radius: 20px; }
+.calendar tr:last-child td:last-child { border-bottom-right-radius: 20px; }
+
+/* Animacja wejścia */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .calendar-section h2 {
+    font-size: 2rem;
+  }
+
+  .calendar th, .calendar td {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  /* Zmniejszamy pole wyboru */
+  select {
+    font-size: 0.9rem;  /* Mniejsza czcionka */
+    padding: 5px 10px; /* Mniejsze wypełnienie */
+    width: 150px;  /* Ustawiamy szerokość */
+    height: 30px; /* Zmniejszenie wysokości */
+  }
+
+  nav {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .tab-button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+
 /* Responsywność dla telefonów */
 @media (max-width: 600px) {
   /* Header - menu mobilne */
@@ -541,83 +849,19 @@ footer {
   nav a, .btn-header {
     width: 100%;
     text-align: center;
-    padding: 12px;
+    margin: 5px 0;
   }
 
-  /* Hero - dopasowanie tekstu */
   .hero h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  /* Przyciski */
   .btn {
     padding: 12px 30px;
   }
 
-  /* Tabele - przewijanie poziome */
   .calendar {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  table {
     width: 100%;
-    display: block;
-    overflow-x: auto;
-  }
-
-  /* Formularz zapisy */
-  .form-zapisy input {
-    width: 90%;
-  }
-
-  .form-zapisy button {
-    width: 90%;
-  }
-
-  /* Tabela: Klasyfikacja Kierowców i Drużynowa */
-  .table-container1, .table-container2 {
-    padding: 15px;
-  }
-
-  /* Zmniejszenie czcionek w tabelach na urządzeniach mobilnych */
-  .calendar th, .calendar td {
     font-size: 0.9rem;
-    padding: 10px;
   }
-
-  /* Przycisk nawigacyjny - tablet i mniejsze */
-  .tab-button {
-    font-size: 1rem;
-    padding: 10px 15px;
-  }
-
-  /* Ikony drużyn i kierowców */
-  .team-icon, .driver-icon {
-    width: 30px;
-    height: 30px;
-  }
-}
-/* Stylowanie dla pola wyboru */
-select {
-  width: auto; /* Automatyczna szerokość */
-  padding: 5px 10px; /* Mniejsze wypełnienie w pionie i poziomie */
-  font-size: 0.9rem; /* Mniejsza czcionka */
-  height: 30px; /* Mniejsza wysokość */
-  border-radius: 5px; /* Zaokrąglone rogi */
-  border: 1px solid #d1c4e9; /* Delikatna ramka */
-  background-color: rgba(255, 255, 255, 0.8); /* Tło z przezroczystością */
-  transition: all 0.3s ease; /* Płynna animacja przy zmianie */
-}
-
-/* Zmiana wyglądu przy focus */
-select:focus {
-  outline: none;
-  border-color: #ba68c8; /* Zmiana koloru ramki */
-  box-shadow: 0 0 5px rgba(186, 104, 200, 0.5); /* Lekki cień */
 }
