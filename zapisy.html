@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zapisy - SpeedSphereSeries</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Nawigacja -->
+  <header>
+    <a href="index.html" class="logo">SpeedSphereSeries</a>
+    <nav>
+      <a href="index.html">Strona Główna</a>
+      <a href="informacje.html" class="btn-header">Dowiedz się więcej</a>
+      <a href="kalendarz.html">Kalendarz</a>
+      <a href="klasyfikacja.html" class="btn-nav">Klasyfikacja</a>
+    </nav>
+  </header>
+
+ 
+
+    <form action="send_mail.php" method="POST" class="form-zapisy">
+      <input type="text" name="name" placeholder="Imię i Nazwisko" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="team" placeholder="Zespół (opcjonalnie)">
+      <textarea name="message" placeholder="Uwagi (np. preferowane auto)" rows="4"></textarea>
+      <button type="submit" class="btn-neon">Zapisz się</button>
+    </form>
+  </section>
+
+  <footer>&copy; 2025 SpeedSphereSeries</footer>
+
+</body>
+</html>

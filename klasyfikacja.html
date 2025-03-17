@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klasyfikacja - SpeedSphereSeries</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Tło: Bloby -->
+  <div class="blobs">
+    <div class="blob" style="top: 10%; left: 20%;"></div>
+    <div class="blob" style="top: 50%; left: 70%;"></div>
+  </div>
+
+  <!-- Tło: Linie -->
+  <div class="lines">
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+    <div class="line"></div><div class="line"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">SpeedSphere Series</a>
+    <nav>
+      <a href="index.html" class="btn-nav">Strona Główna</a>
+      <a href="informacje.html" class="btn-header">Dowiedz się więcej</a>
+      <a href="kalendarz.html" class="btn-header">Kalendarz</a>
+      <a href="zapisy.html" class="btn-nav">Zapisy</a>
+    </nav>
+  </header>
+
+  <!-- Sekcja Klasyfikacji -->
+  <section class="calendar-section">
+    <div class="tables-wrapper">
+
+      <!-- Przełączniki Tabel -->
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="showTable('drivers')">Klasyfikacja Kierowców</button>
+        <button class="tab-button" onclick="showTable('teams')">Klasyfikacja Drużynowa</button>
+      </div>
+
+      <!-- Klasyfikacja Kierowców -->
+      <div id="drivers" class="table-container1">
+        <h2>Klasyfikacja Kierowców</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Miejsce</th>
+              <th>Zawodnik</th>
+              <th>Ikona</th>
+              <th>Punkty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>???</td>
+              <td><img src="2.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>???</td>
+              <td><img src="2.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>???</td>
+              <td><img src="alpine.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>???</td>
+              <td><img src="alpine.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>???</td>
+              <td><img src="astonmartin.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>???</td>
+              <td><img src="astonmartin.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>???</td>
+              <td><img src="hass.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>???</td>
+              <td><img src="hass.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>???</td>
+              <td><img src="kick.svg" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>???</td>
+              <td><img src="kick.svg" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>???</td>
+              <td><img src="mcl.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>???</td>
+              <td><img src="mcl.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>???</td>
+              <td><img src="mercedes.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>???</td>
+              <td><img src="mercedes.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>???</td>
+              <td><img src="redbull.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>???</td>
+              <td><img src="redbull.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>???</td>
+              <td><img src="visa.jpg" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>???</td>
+              <td><img src="visa.jpg" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>???</td>
+              <td><img src="williams.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>???</td>
+              <td><img src="williams.png" alt="Jan Kowalski" class="driver-icon"></td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Klasyfikacja Drużynowa -->
+      <div id="teams" class="table-container2" style="display:none;">
+        <h2>Klasyfikacja Drużynowa</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Miejsce</th>
+              <th>Zespół</th>
+              <th>Punkty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><img src="2.png" alt="Team A" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><img src="mercedes.png" alt="Team B" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><img src="williams.png" alt="Team C" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><img src="mcl.png" alt="Team D" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><img src="redbull.png" alt="Team E" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><img src="kick.svg" alt="Team F" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td><img src="astonmartin.png" alt="Team G" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><img src="hass.png" alt="Team H" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><img src="visa.jpg" alt="Team I" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><img src="alpine.png" alt="Team J" class="team-icon"></td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>&copy; 2024 SpeedSphereSeries. Wszelkie prawa zastrzeżone.</footer>
+
+  <script>
+    // Funkcja do przełączania widoczności tabel
+    function showTable(tableType) {
+      // Ukrywanie obu tabel
+      document.getElementById('drivers').style.display = 'none';
+      document.getElementById('teams').style.display = 'none';
+
+      // Usuwanie aktywnej klasy z przycisków
+      var buttons = document.querySelectorAll('.tab-button');
+      buttons.forEach(function(button) {
+        button.classList.remove('active');
+      });
+
+      // Pokaż odpowiednią tabelę
+      if (tableType === 'drivers') {
+        document.getElementById('drivers').style.display = 'block';
+        document.querySelector('.tab-button:nth-child(1)').classList.add('active');
+      } else if (tableType === 'teams') {
+        document.getElementById('teams').style.display = 'block';
+        document.querySelector('.tab-button:nth-child(2)').classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
